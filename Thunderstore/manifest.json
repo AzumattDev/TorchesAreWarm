@@ -1,6 +1,6 @@
 {
   "name": "TorchesAreWarm",
-  "version_number": "1.0.1",
+  "version_number": "1.0.2",
   "website_url": "https://discord.gg/Vd89cSgxNW",
   "description": "Torches now warm the player when held.",
   "dependencies": [

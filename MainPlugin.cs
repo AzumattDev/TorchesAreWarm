@@ -9,7 +9,7 @@ namespace TorchesAreWarm
 
     {
         internal const string ModName = "TorchesAreWarm";
-        internal const string ModVersion = "1.0.1";
+        internal const string ModVersion = "1.0.2";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private readonly Harmony _harmony = new(ModGUID);
@@ -27,7 +27,7 @@ namespace TorchesAreWarm
         static void Postfix(PlayerCharacter __instance)
         {
             if (Global.code.Player.weaponInHand == null) return;
-            if (Global.code.Player.weaponInHand._item.name == "B3_Torch")
+            if (Global.code.Player.weaponInHand && Global.code.Player.weaponInHand.GetComponent<Item>().ItemID == RM.code.Torch.ItemID)
             {
                 Global.code.Player.FireSourceHeat += 50;
             }
